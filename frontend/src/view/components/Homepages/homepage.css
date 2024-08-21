@@ -1,0 +1,115 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* overflow: hidden; */
+}
+
+.totalcontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.homecontainer{
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../../assets/bgeven1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.homeinsidecontainer{
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.opacityshow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(151, 151, 151);
+    opacity:0.3;
+    z-index: 1;
+}
+
+.header
+{
+   display: flex; 
+   justify-content: space-between;
+   padding: 15px 0px;
+   padding-right: 70px;
+   align-items: center;
+   padding-left: 50px;
+}
+
+.headername{
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 3px 0px 2px rgb(168, 168, 168);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.headernavbar{
+    display: flex;
+    gap: 30px;
+    font-size: 17px;
+    font-weight:500;
+    cursor: pointer;
+    font-family: sans-serif;   
+}
+
+.bar{
+   width: 35px;
+   text-align: center;
+   margin: auto;
+   margin-top: 3px;
+   height: 4px;  
+   border-radius: 10px;
+   background-color: transparent;
+}
+
+.baractive{
+    background-color: rgb(255, 25, 25);
+}
+
+.descreption{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 80ch;
+    gap: 10px;
+}
+
+.eventcontainers{
+    display: flex;
+    margin: 0px 0px;
+    padding:30px 150px;
+    gap: 150px;
+    flex-wrap: wrap;
+    background: linear-gradient(to  right bottom, #2f2f76, #080837, #14145f);
+    /* background-color: rgb(82, 82, 246); */
+}
+
+.maindescreption{
+    font-size: 25px;
+    font-family:sans-serif;
+    font-weight: 600;
+}
+
+.subdescreption{
+  font-size: 19px;
+  font-weight:550;
+}

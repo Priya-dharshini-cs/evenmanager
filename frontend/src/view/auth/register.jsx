@@ -11,7 +11,7 @@ const Register = () => {
   const [isfocused6,setisfouced6]=useState(false)
   return (
      <div className='background'>
-      <div className='container'>
+      <div className='formcontainer'>
           <div className='header'>
             Sign Up
             </div> 
