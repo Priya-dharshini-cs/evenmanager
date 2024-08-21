@@ -12,7 +12,12 @@ const Login = () => {
   const [auth,setauth]=useRecoilState(authatom)
   return (
     <div className='background1'>
+      
+      <div className='opacitycheck'>
+
+      </div>
       <div className='container1'>
+
         <div className='header1'>
           Login
         </div>

@@ -66,7 +66,7 @@ const Homepage = () => {
            create ,edit and delete their posts and user can 
            see and register for the events and users will
            explore the events and  trends to recommend to the 
-           users
+           users and analyse and register to the regrading events
          </div>
        </div>
        </div>

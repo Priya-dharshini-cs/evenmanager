@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './register.css'
 import {useRecoilState, useRecoilValue}from 'recoil'
-import { FaBarcode, FaEnvelope, FaFingerprint, FaIdBadge, FaIdCard, FaKey, FaLock, FaRegBookmark, FaRegCalendar, FaUser, FaUserCircle, FaUserTag } from 'react-icons/fa'
+import { FaBarcode, FaEnvelope, FaFingerprint, FaIdBadge, FaIdCard, FaKey, FaLock, FaRegBookmark, FaRegCalendar, FaUniversity, FaUser, FaUserCircle, FaUserTag } from 'react-icons/fa'
 import authatom from '../atoms/authatom'
 const Register = () => {
   
@@ -11,13 +11,17 @@ const Register = () => {
   const [isfocused4,setisfouced4]=useState(false)
   const [isfocused5,setisfouced5]=useState(false)
   const [isfocused6,setisfouced6]=useState(false)
+  const [isfocused7,setisfouced7]=useState(false)
 
   const [auth,setauth]=useRecoilState(authatom)
   console.log(auth)
   return (
      <div className='background'>
+     <div className='opacitycheck1'>
+     </div>
       <div className='formcontainer'>
-          <div className='header'>
+         
+          <div className='header-1'>
             Sign Up
             </div> 
             <div className='fieldcontainer'>
@@ -43,6 +47,14 @@ const Register = () => {
                 className='inputfiled'
                 onFocus={()=>setisfouced3(true)}
                 onBlur={()=>setisfouced3(false)}/>
+              </div>
+              <div className={`field ${isfocused7 ? 'field-add' : ''}`}>
+                  <FaUniversity/>
+                <input type="text " 
+                onFocus={()=>setisfouced7(true)}
+                onBlur={()=>setisfouced7(false)}
+                placeholder='Enter College name'  
+                className='inputfiled'/>
               </div>
               <div className={`field ${isfocused4 ? 'field-add' : ''}`}>
                 <FaUserCircle/>
