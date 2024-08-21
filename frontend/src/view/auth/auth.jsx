@@ -12,7 +12,7 @@ const Auth = () => {
   return (
      <div>
       {
-        !auth === "Login" ?  <Login/> : <Register/>
+        auth === "Login" ?  <Login/> : <Register/>
       }
      </div>
   )
