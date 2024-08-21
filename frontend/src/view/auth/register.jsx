@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './register.css'
+import {useRecoilState, useRecoilValue}from 'recoil'
 import { FaBarcode, FaEnvelope, FaFingerprint, FaIdBadge, FaIdCard, FaKey, FaLock, FaRegBookmark, FaRegCalendar, FaUser, FaUserCircle, FaUserTag } from 'react-icons/fa'
+import authatom from '../atoms/authatom'
 const Register = () => {
   
   const [isfocused1,setisfouced1]=useState(false)
@@ -9,6 +11,9 @@ const Register = () => {
   const [isfocused4,setisfouced4]=useState(false)
   const [isfocused5,setisfouced5]=useState(false)
   const [isfocused6,setisfouced6]=useState(false)
+
+  const [auth,setauth]=useRecoilState(authatom)
+  console.log(auth)
   return (
      <div className='background'>
       <div className='formcontainer'>
@@ -101,7 +106,8 @@ const Register = () => {
                 <div className='showbar1'>
                 Already have an account 
                 </div>
-                <div className='showbar2'>
+                <div className='showbar2'
+                onClick={()=>setauth("Login")}>
                   Login
                 </div>
               </div>
