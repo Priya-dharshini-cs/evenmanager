@@ -1,5 +1,7 @@
 import React from 'react'
-import img1 from '../../../assets/bgevent.jpeg'
+import img1 from '../../../assets/SPOTLIGHT PIC.jpg'
+
+
 import './eventcomponent.css'
 
 const Eventcomponent = () => {
@@ -10,13 +12,13 @@ const Eventcomponent = () => {
       </div>
       <div className='eventbanner'>
        <div className='eventheader'>
-            Rotract Quiz Game    
+            Spotlight    
         </div> 
         <div className='eventbody'>
-          This is the quiz game . it conducted in both
-          technical and nontechnical wasy. This event is 
-          conducted in the drawing hall . Intresting students
-          are invited to participate in this event.
+          We invite you for this event Spotlight.
+          Organized by:Fine arts Club.
+          venue:Indoor auditorium,AV campus.
+          Date:20/08/2024 Time:10.00 am
         </div>
       </div>
       <div className='viewbtn '>
