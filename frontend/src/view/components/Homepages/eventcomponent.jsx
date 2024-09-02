@@ -3,8 +3,10 @@ import img1 from '../../../assets/SPOTLIGHT PIC.jpg'
 
 
 import './eventcomponent.css'
+import { useNavigate } from 'react-router-dom'
 
 const Eventcomponent = () => {
+  const navigate=useNavigate()
   return (
     <div className='eventcontainer '>
       <div className='imgcontainer'>
@@ -21,7 +23,8 @@ const Eventcomponent = () => {
           Date:20/08/2024 Time:10.00 am
         </div>
       </div>
-      <div className='viewbtn '>
+      <div className='viewbtn ' 
+      onClick={()=>navigate('/eventdetails')}>
         view
       </div>
     </div>

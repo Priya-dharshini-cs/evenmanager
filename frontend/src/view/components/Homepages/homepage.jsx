@@ -60,17 +60,25 @@ const Homepage = () => {
             <div className='maindescreption'>
               MyEventO
             </div>
-            <div className='subdescreption'>
-              Explore a variety of exciting events happening across the campus. Whether you're interested in academic workshops, sports tournaments, cultural festivals, or career-building seminars, we've got something for everyone!
+            <div
+              className='subdescreption'>
+              <span>
+                Explore a variety of exciting events happening across the campus.
+                Whether you're interested in academic workshops, sports tournaments, cultural festivals, or career-building seminars, we've got something for everyone!
+              </span>
+              <br />
+              </div>
+              <div className="subdescription2">
+                Browse Events: Check out the latest events tailored just for you.<br />
+                Register: Easily sign up for events and secure your spot.<br />
+                Stay Informed: Get the details you need, including event descriptions, dates, venues, and more.<br />
+                Don't miss out on the opportunity to connect, learn, and engage with your college community.
+                </div>
+              
+            
 
-              Browse Events: Check out the latest events tailored just for you.
-              Register: Easily sign up for events and secure your spot.
-              Stay Informed: Get the details you need, including event descriptions, dates, venues, and more.
-              Don't miss out on the opportunity to connect, learn, and engage with your college community. Start exploring now
-            </div>
-            
             <button className='explorebtn'>Start explore now</button>
-            
+
           </div>
         </div>
       </div>
@@ -79,10 +87,9 @@ const Homepage = () => {
       <div className='eventcontainers '>
         <Eventcomponent />
         <Eventcomponent />
-        <Eventcomponent />
-        <Eventcomponent />
-        <Eventcomponent />
-        <Eventcomponent />
+        <Eventcomponent/>
+        <Eventcomponent/>
+
 
       </div>
     </div>
