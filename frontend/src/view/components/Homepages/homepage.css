@@ -2,19 +2,24 @@
 body{
     padding: 0;
     margin: 0;
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     overflow: auto;
     /* overflow: hidden; */
 }
 
 .totalcontainer{
-    display: flex;
+        display: flex;
+    overflow-y: auto;
+
+    /* padding-top: 60px; */
     flex-direction: column;
 }
 
 .homecontainer{
     display: flex;
+    margin-top: 60px;
+
     flex-direction: column;
     background-image: url('../../../assets/eventmanagementbg.png');
     background-repeat: no-repeat;
@@ -33,7 +38,7 @@ body{
 
 
     
-
+/* 
 .header
 {
    display: flex; 
@@ -83,7 +88,7 @@ body{
 
 .baractive{
     background-color: rgb(255, 25, 25);
-}
+} */
 
 .descreption{
     display: flex;
@@ -113,13 +118,29 @@ body{
 .explorebtn{
     
     width: 150px;
-    height: 5vh;
+    height: 6vh;
     border: none;
     border-radius: 10px;
     color: white;
-    
+    cursor: pointer;
+    font-family: sans-serif;
      margin-top: 40px;
     background-color: #ed0851;
+}
+
+.buttonfield{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+.explorebtn:hover{
+    background-color: #f4467d;
+}
+
+.explorebtn:focus{
+    background-color: #f4467d;
 }
 
 .maindescreption{

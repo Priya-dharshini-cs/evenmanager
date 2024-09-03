@@ -4,12 +4,15 @@ import App from './App.jsx'
 import './index.css'
 import {BrowserRouter} from 'react-router-dom'
 import { RecoilRoot } from 'recoil'
+import Eventcontext from './view/components/Homepages/eventcontext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
    <BrowserRouter>
    <RecoilRoot>
-   <App />
+    <Eventcontext>
+    <App />
+    </Eventcontext>
    </RecoilRoot>
     </BrowserRouter>
   </React.StrictMode>,
