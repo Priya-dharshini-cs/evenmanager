@@ -22,6 +22,7 @@ const Eventcreate = () => {
             <input type="text" className='columninput'
             placeholder='Enter event name'/>
         </div>
+       
         <div className='columnfield'>
             <div className='columnlabel'>
                Event Organizer   
@@ -50,6 +51,13 @@ const Eventcreate = () => {
             <input type="text" className='columninput'
             placeholder='Enter contact phoneno'/>
         </div>  
+        <div className='columnfield'>
+            <div className='columnlabel'>
+               Event Date 
+            </div>
+            <input type="date" className='columninput'
+            placeholder='Enter event name'/>
+        </div>
         <div className='columnfield'>
             <div className='columnlabel'>
                Descreption   

@@ -5,54 +5,113 @@ import React from 'react';
 import img1 from '../../../assets/SPOTLIGHT PIC.jpg'
 
 import './eventpage.css'
-
+import {useNavigate} from  'react-router-dom'
 
 const EventDetail = () => {
+
+  const navigate=useNavigate()
   return (
     
     <div className="eventbox">
-      {/* <div className="navbar">
-        <div className="nav-list">
-          <h1 className='logo'>MyEventO</h1>
-          <a href="#" className="nav-link">Home</a>
-          <a href="#" className="nav-link">Events</a>
-          <a href="#" className="nav-link">Trends</a>
-          <a href="#" className="nav-link">Profile</a>
-
-
-
-          
-          
-
-        </div>
-      </div> */}
-      
-
-      <h1 className="eventname">SPOTLIGHT 2K24 - THE TALENT HUNT - FINE ARTS CLUB OF AVIT</h1>
       <div className="eventimgdetails">
+      <div className='imagecontainer'>
       <img
         src={img1}
         alt="Event Banner"
         className='eventimg'
        
       />
-      <div className="eventdetails">
-        <span className="textdet">Event name: Spotlight</span><br />
-        
-    
-      <p className="textdet">Organized by: Fine Arts Club of AVIT</p>
-      <p className="textdet">Date: Aug 28th, 2024</p>
-      <p className="textdet">Venue: Indoor Auditorium, AV Campus</p>
-      <p className="textdet">Event Coordinator: Priya</p>
-      <p className="textdet">Contact: +912587658966</p>
       </div>
-    </div>
-      <button className="regbtn">
+      <div className="eventdetails">
+      <div className='detailcontainer'>
+      <div className='detailfield'>
+      {/* <div className='datalabel'>
+             
+      </div> */}
+       
+      <div className='dataans1'>
+      Spotlight
+      </div>
+      </div>
+      <div className='detailfield'>
+      
+        <div className='datalabel'>
+      Organized by
+      </div>
+      <div>
+      Fine Arts Club of AVIT
+      </div>
+      </div>
+      
+      <div className='detailfield'>
+      <div className='datalabel'>
+             Date
+      </div>
+      <div>
+      Aug 28th, 2024
+      </div>
+      </div>
+      <div className='detailfield'>
+      <div className='datalabel'>
+             Venue
+      </div>
+      <div>
+      Indoor Auditorium
+      </div>
+      </div>
+      <div className='detailfield'>
+      <div className='datalabel'>
+             Event Coordinator
+      </div>
+      <div>
+       Priya
+      </div>
+      </div>
+      <div className='detailfield'>
+      <div className='datalabel'>
+            Contact
+      </div>
+      <div>
+       +919113123121
+      </div>
+      </div>
+      <button className="regbtn"
+      onClick={()=>navigate('/event-register')}>
           Register Here
         </button>
-      <button className="viewbt ">
-        View More
-      </button>
+</div>
+    
+      </div>
+    </div>
+     <div 
+      className='lowercontainer'>
+        <div className='descreptioncontainer'>
+           <div className='desheader'>
+              Descreption
+           </div>
+           <div className='descontainer'>
+           Ensure that the setisopen and navigate functions are correctly defined and available in your component's scope.
+           Verify that the isopen state is being managed properly and that it correctly controls the visibility of the modal.
+           Ensure that the setisopen and navigate functions are correctly defined and available in your component's scope.
+Verify that the isopen state is being managed properly and that it correctly controls the visibility of the modal.
+Ensure that the setisopen and navigate functions are correctly defined and available in your component's scope.
+Verify that the isopen state is being managed properly and that it correctly controls the visibility of the modal.
+Ensure that the setisopen and navigate functions are correctly defined and available in your component's scope.
+Verify that the isopen state is being managed properly and that it correctly controls the visibility of the modal.
+           </div>
+        </div>
+        <div className='regulationscontainer'>
+              <div className='regheader'>
+                Regulations
+              </div>
+              <div className='regcontainer'>
+              Ensure that the setisopen and navigate functions are correctly defined and available in your component's scope.
+              Verify that the isopen state is being managed properly and that it correctly controls the visibility of the modal.
+              Ensure that the setisopen and navigate functions are correctly defined and available in your component's scope.
+Verify that the isopen state is being managed properly and that it correctly controls the visibility of the modal.
+              </div>
+        </div>
+      </div>     
     </div>
 
   );
