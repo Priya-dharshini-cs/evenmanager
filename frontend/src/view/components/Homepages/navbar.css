@@ -22,6 +22,19 @@
     margin: 0;
   }
 
+  @media (max-width:400px) {
+    .headernavbar{
+       visibility: hidden;
+       width: 0;
+    }
+    .headername{
+        font-size: 20px;
+    }  
+    .header{
+       padding: 15px 10px;
+    }
+ }
+
 .headername{
     font-size: 22px;
     /* margin-right: 15vh; */
@@ -41,6 +54,16 @@
     cursor: pointer;
     font-family: sans-serif;   
 }
+
+
+.headernavbar1
+{
+    display: flex;
+    gap:10px;
+    padding-right: 30px;  
+    align-items:center;
+}
+
 
 .bar{
    width: 35px;

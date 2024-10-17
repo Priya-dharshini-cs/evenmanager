@@ -3,20 +3,19 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
-    
+    height: 100vh;
 }
 
 .background{
-     display: flex;
-     justify-content:center;
-     align-items: center;
-     width:100%;
-     height:100vh;
-     max-height:fit-content;
-     background-image: url('../../assets/eventbgimg1.webp');
-     background-repeat: no-repeat;
-     background-size: cover;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height:100vh;
+    /* max-height:fit-content; */
+    background-image: url('../../assets/eventbgimg1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -30,6 +29,10 @@ body{
     opacity: 0.2;   
   }
 
+  .formcontainer{
+    width: 90%;
+    height: auto;
+  }
 
 
 .formcontainer{
@@ -45,6 +48,11 @@ body{
     z-index: 1;
     font-family: sans-serif;
 }
+
+
+
+
+
 
 .formcontainer .header-1
 {
@@ -79,6 +87,11 @@ body{
        border: 2px solid transparent;       
 }
 
+
+/* .field{
+    width: 90%;
+} */
+
 .field-add{
     border: 2px solid rgb(35, 107, 35);
     border-radius: 5px;
@@ -93,6 +106,9 @@ body{
     margin-left: 15px;
     /* align-items: center; */
 }
+
+
+
 .subfield1{
    display: flex;
    gap: 5px;
@@ -105,6 +121,17 @@ body{
     width: 100%;
     gap: 5px;
 }
+
+.inputfiled1{
+    width:225px;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 5px;
+    outline: none;
+    border: none;
+    background: white;
+}
+
 .inputfiled{
     width:90%;
     height: 30px;
@@ -121,6 +148,22 @@ body{
     border: 2px solid transparent;
     border-radius: 5px;
 }
+
+
+@media (max-width:400px) {
+    .formcontainer{
+        width:340px;
+    }
+    .inputfiled1{
+        width:140px;
+    }
+    .options{
+        width:140px;
+    }
+}
+
+
+
 
 .option-add{
     border:2px solid  rgb(43, 131, 43);
@@ -163,11 +206,13 @@ body{
     align-items: center;
 }
 
-.showbar1{
+/* .showbar1{
     
-}
+} */
 .showbar2{
     color: rgb(44, 44, 255);
     cursor: pointer;
 
 }
+
+

@@ -1,14 +1,18 @@
 .background1{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    width:100%;
-    height:100vh;
-    max-height:fit-content;
-    background-image: url('../../assets/eventbgimg1.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
+   display: flex;
+   justify-content:center;
+   align-items: center;
+   width:100%;
+   height:100vh;
+   /* max-height:fit-content; */
+   background-image: url('../../assets/eventbgimg1.webp');
+   background-repeat: no-repeat;
+   background-size: cover;
 }
+
+
+
+
 
 .opacitycheck{
   position:absolute;
@@ -32,6 +36,13 @@
    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
    font-family: sans-serif;
    z-index: 1;
+}
+
+@media (max-width:400px) {
+   .container1{
+       width:340px;
+   } 
+  
 }
 
 .header1

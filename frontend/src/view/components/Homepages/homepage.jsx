@@ -1,19 +1,62 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import './homepage.css'
 import Eventcomponent from './eventcomponent'
 import { useNavigate } from 'react-router-dom'
+import { eventcontext } from './eventcontext'
+import { useRecoilValue } from 'recoil'
+import useratom from '../../atoms/useratom'
 const Homepage = () => {
 
 
   // const checkscroll=window.scrollY.
   // console.log(checkscroll)
  const navigate=useNavigate()
+ const user1=useRecoilValue(useratom)
+ const user=user1?.token
+ const {changeref,trendref}=useContext(eventcontext)
+const [trends,settrends]=useState(null)
+const [events,seteevents]=useState(null)
+
+ const handlechange=(ref)=>{
+  ref?.current?.scrollIntoView({behavior:"smooth",
+    // block:"center"
+  })
+}
+
+ useEffect(()=>{
+
+  const getevents=async()=>{
+   try{
+     const res=await fetch('/api/event')
+     const data=await res.json()
+     seteevents(data)
+   }
+   catch(err)
+   {
+    console.log(err)
+   }
+  }
+  const gettrends=async()=>{
+    try{
+      const res=await fetch('/api/event/latest')
+      const data=await res.json()
+      settrends(data)
+    }
+    catch(err)
+    {
+     console.log(err)
+    }
+   }
+  gettrends()
+  getevents()
+ },[])
+
   return (
     <div className='totalcontainer'>
       <div className='homecontainer'>
         <div className='opacityshow'>
         </div>
-        <div className='homeinsidecontainer'>
+        <div className='homeinsidecontaine'>
 
           <div className='descreption'>
             <div className='maindescreption'>
@@ -21,7 +64,7 @@ const Homepage = () => {
             </div>
             <div
               className='subdescreption'>
-              <span>
+              <span >
                 Explore a variety of exciting events happening across the campus.
                 Whether you're interested in academic workshops, sports tournaments, cultural festivals, or career-building seminars, we've got something for everyone!
               </span>
@@ -36,10 +79,15 @@ const Homepage = () => {
               
             
              <div className='buttonfield'>
-             <button className='explorebtn'>Start explore now</button>
-             <button className='explorebtn' 
-             onClick={()=>navigate('/event-register')}>Create Event</button>
-              
+             <button className='explorebtn'
+             onClick={()=>handlechange(trendref)}
+             >Start explore now</button>
+           {
+            // user?.role && 
+            <button className='explorebtn' 
+            onClick={()=>navigate('/event-create')}>Create Event</button>
+             
+           }
               </div> 
            
 
@@ -48,14 +96,49 @@ const Homepage = () => {
       </div>
       <div>
       </div>
-      <div className='eventcontainers '>
-        <Eventcomponent />
-        <Eventcomponent />
-        <Eventcomponent/>
-        <Eventcomponent/>
-
-
+      <div className='eventcontainers ' 
+      ref={changeref}
+      >
+      
+      <div className='eventelemcontainer'>
+       {
+        events?.map((event)=>(
+          <Eventcomponent key={event?._id} event={event} />
+        ))
+       }
+       
       </div>
+    
+    <div 
+    className='trendcontainer'
+    > 
+     <div className='trendheadcontainer'
+>
+     <div className='trendhead' 
+    ref={trendref}
+    >
+      Trend Now
+      </div>
+       <div className='trendside'>
+       </div>
+     </div>
+       <div className='trendelemcontainer'>
+       
+       {
+        trends?.map((event)=>(
+          <Eventcomponent key={event?._id} event={event} />
+        ))
+       }
+       
+    </div>
+    </div>
+      </div>
+
+      {/* <div ref={trendref}>
+      </div>    */}
+      {/* <div ref={changeref}>
+
+      </div> */}
     </div>
   )
 }

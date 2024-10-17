@@ -1,8 +1,8 @@
 .modelprofile{
-    width: 400px;
-    height: 350px;
+    width: 340px;
+    height: 360px;
     z-index: 1000;
-    right: 20px;
+    right:10px;
     top: 70px;
     border-radius: 5px;
     /* left: 0; */
@@ -61,6 +61,7 @@
     /* cursor: pointer; */
     font-size: 15px;
     cursor: pointer;
+    color: white;
     
 }
 
@@ -86,11 +87,32 @@
 }
 
 .profilebtn2{
-    background: #328eff;
+    background: #153d6d;
     cursor: pointer;
 }
 
-.profilebtn2:hover{
+.profilebtn2:hover
+{
+    background-color: #10478b;
+}
+
+
+
+.profilebtn3{
+    background: #328eff;
+    cursor: pointer;
+    height: 40px;
+    margin: 5px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+
+.profilebtn3:hover{
     background-color: #7cb7ff;
 }
 

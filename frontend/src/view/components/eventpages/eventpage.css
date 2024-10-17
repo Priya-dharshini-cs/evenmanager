@@ -11,47 +11,142 @@
 }
 
 
-
 .eventname {
   margin-top: 30px;
   color: rgb(0, 0, 0);
 }
 
-.eventimgdetails {
-  display: flex;
-  /* padding-top: 300px; */
-}
-
-
 
 .eventbox {
-  /* background-color: #f2f2f2; */
-  /* light gray background */
-  /* padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  /* margin-top: 10px; */
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding: 0px 10px;
+  /* padding: 0px 10px; */
   padding-top: 80px;
+  position: relative;
 }
 
 .eventimgdetails {
   display: flex;
-  /* flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px; */
-  /* width: 50%; */
+  flex-direction: column;
+  width: 100%;  
   gap: 20px;
-  height: 450px;
+  height:auto;
+  margin-top:6px;
 }
 
+.lowercontainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin: 6px;
+  margin-top: 30px;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+
+.desheader,.regheader{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.descontainer{
+  padding: 10px 8px;
+  margin: 5px;
+  margin-top: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  min-height: 200px;
+  border: 1px solid rgb(167, 165, 165);
+}
+
+.regcontainer{
+  padding: 10px 8px;
+  margin: 5px;
+  margin-top: 10px;
+  min-height: 200px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(167, 165, 165);
+}
+
+.descreptioncontainer{
+  width: 98%;
+}
+
+.regulationscontainer{
+  width: 98%;
+}
+
+
+
+
+
+.detailfield{
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+
+
+.datalabel{
+  font-weight: 600;
+  width: 135px;
+}
+
+
+@media (min-width:400px) {
+
+  .datalabel{
+    font-size: 18px;  
+    font-weight: 600;
+    width: 180px;
+  }
+
+  
+ 
+  .eventimgdetails{
+   flex-direction: row;
+   width: 100%;
+   gap: 20px;
+   height: 450px;
+   margin:10px;
+   margin-bottom: 30px;
+ }
+  .imagecontainer{
+   width: 50%;
+  }
+  .eventdetails{
+   width: 50%;
+  }
+ 
+  .lowercontainer{
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    margin-top: 30px;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    
+ }
+ 
+ .descreptioncontainer{
+   width:50%;
+ }
+ .regulationscontainer{
+   width:50%;
+ }
+ }
+
+
+
+
 .imagecontainer{
-  width: 50%;
+  width: 98%;
+  margin: auto;
 }
 
 .eventimg {
@@ -62,9 +157,10 @@
 }
 
 .eventdetails {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 
 .textdet {
@@ -103,11 +199,7 @@
   padding-left: 30px;
 }
 
-.datalabel{
-  font-size: 18px;  
-  font-weight: 600;
-  width: 180px;
-}
+
 
 .dataans1{
   font-size: 38px;
@@ -119,56 +211,19 @@
 
 }
 
-.detailfield{
-  display: flex;
-  gap: 10px;
-}
 
 .detailcontainer{
   display: flex;
   gap: 30px;
   width: 100%;
+  margin: auto;
   flex-direction: column;
   font-family: sans-serif;
 }
 
-.lowercontainer{
-   display: flex;
-   width: 100%;
-   gap: 10px;
-   margin-top: 30px;
-   font-family: sans-serif;
-   margin-bottom: 20px;
-}
-
-.desheader,.regheader{
-  font-size: 18px;
-  font-weight: 600;
-
-}
-
-.descontainer{
-  padding: 10px 8px;
-  margin: 5px;
-  font-size: 15px;
-  border-radius: 5px;
-  min-height: 200px;
-  border: 1px solid rgb(205, 203, 203);
-}
-
-.regcontainer{
-  padding: 10px 8px;
-  margin: 5px;
-  min-height: 200px;
-  font-size: 15px;
-  border-radius: 5px;
-  border: 1px solid rgb(205, 203, 203);
-}
-
-.descreptioncontainer{
-  width: 50%;
-}
-
-.regulationscontainer{
-  width: 50%;
+.editicons{
+  position: absolute;
+  top:65px;
+  gap:2;
+  right: 10px;
 }

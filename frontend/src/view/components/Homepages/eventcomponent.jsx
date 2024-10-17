@@ -5,26 +5,24 @@ import img1 from '../../../assets/SPOTLIGHT PIC.jpg'
 import './eventcomponent.css'
 import { useNavigate } from 'react-router-dom'
 
-const Eventcomponent = () => {
+const Eventcomponent = ({event}) => {
   const navigate=useNavigate()
+  console.log(event)
   return (
     <div className='eventcontainer '>
       <div className='imgcontainer'>
-      <img src={img1} alt=""  />
+      <img src={event?.imgurl} alt=""  />
       </div>
       <div className='eventbanner'>
        <div className='eventheader'>
-            Spotlight    
+         {event?.name}
         </div> 
         <div className='eventbody'>
-          We invite you for this event Spotlight.
-          Organized by:Fine arts Club.
-          venue:Indoor auditorium,AV campus.
-          Date:20/08/2024 Time:10.00 am
+       {event?.descreption}
         </div>
       </div>
       <div className='viewbtn ' 
-      onClick={()=>navigate('/eventdetails')}>
+      onClick={()=>navigate(`/${event?._id}/eventdetails`)}>
         view
       </div>
     </div>

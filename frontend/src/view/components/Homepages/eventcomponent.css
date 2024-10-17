@@ -13,6 +13,13 @@
     background-color:transparent;
 }
 
+@media (max-width:400px) {
+    .eventcontainer{
+        width: 320px;
+        margin: auto;
+    }
+}
+
 .eventcontainer:hover{
     transform:scale(1.01);
     cursor: pointer;
@@ -34,10 +41,10 @@
 }
 
 .eventbanner{
-  width: 90%;
+  width: 92%;
   position: absolute;
   bottom:14%;
-  height: 88px;
+  height: 100px;
   background-color: rgb(221, 221, 221);
   border-radius: 7px;
   display: flex;

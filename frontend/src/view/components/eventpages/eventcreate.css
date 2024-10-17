@@ -12,6 +12,25 @@
     opacity:80%;
 }
 
+@media (max-width:400px) {
+    .eventcreateimg{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+  
+    .eventcreatecontent1{
+        width: 100%;
+    }
+    .detailcolumn1{
+        width: 90%;
+        margin: auto;
+    }
+    .columnfield{
+        margin: 0 10px;
+    }
+}
+
 .eventcreateimg img
 {
     width: 100%;
@@ -22,6 +41,33 @@
 .eventcreatecontent{
     width: 60%;
     height: auto;
+    margin-left: 5px;
+    font-family: sans-serif;
+}
+
+.wrongbutton{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background:rgb(255, 122, 122);
+    border: transparent;
+    position: absolute;
+    cursor: pointer;
+}
+
+.wrongbutton:hover
+{
+    background: #f45454;
+}
+
+.imgcontain
+{
+    position: relative;
+}
+.eventcreatecontent1{
+    width: 60%;
+    height: auto;
+    gap: 30px;
     font-family: sans-serif;
 }
 
@@ -40,7 +86,7 @@
 .detailcolumn{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 330px;
     margin: auto;
     gap: 13px;
     margin-top: 20px;
@@ -49,13 +95,15 @@
 
 
 
+
+
 .detailcolumn1{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 330px;
     margin: auto;
+    margin-top: 60px;   
     gap: 33px;
-    margin-top: 60px;
     /* align-items: center; */
 }
 
@@ -90,8 +138,31 @@
     margin: auto;
     border-radius: 50px;
     cursor: pointer;
+    margin-bottom: 20px;
+    color: white;
+   
 }
 
+.uploadbutton{
+    background: #4e8af9;
+    border: none;
+    width: 120px;
+    height: 40px;
+    margin: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-self: start;
+    align-self:normal;
+    margin-left: 0px;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.uploadbutton:hover{
+    background-color:#4e8af9 ;
+}
 
 .createbtn1{
     background: #ff6c6c;
@@ -99,9 +170,11 @@
     width: 120px;
     height: 40px;
     margin: auto;
+    color: white;
     border-radius: 50px;
     cursor: pointer;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .createbtn:hover
